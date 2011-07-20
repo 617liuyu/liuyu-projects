@@ -1,8 +1,9 @@
 #include "stdio.h"
 int main ()
+
 {
 
-   printf ("liuyu!\n");
+   printf ("挺好玩!\n");
 
 }
 

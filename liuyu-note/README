@@ -1,0 +1,127 @@
+                                  狼 行 天 下
+                                      自由  协作  创造
+
+1.
+
+Ctrl+shift + t  加标签
+Ctrl  PgDn /PgUp   换标签
+不能在两个标签下打开同一文件
+
+2.
+  视频教学
+          http://media.happypeter.org/screencasts.html
+
+  
+
+3.
+
++## 可视行(visual line)
++
++启动和退出: V ((Esc)shift+v)
+             j k 上下选中
+             d   剪切
+             p(小)   往下粘贴
+             P       往上粘贴
++
++整体缩进几行代码： shift+v (可视行模式)
+                    shift+v用j 或 k
++
++首先用可视行模式选中这几行,然后 `shift + >`,'shift + <'
+ 
+
+vim a.c b.c (同时打开两个文件)
++    :ls #see buffers
++    :bn # go to next buffer
++    :bp # go to previous buffer   / （先按Esc ,shift + :）
++    :bd # 关闭 a buffer
++    :set hidden 可以不保存切换 
+vim a.c
++    :e b.c # 就切过去了
+
+vim 
+
++    :set number #显示行
++    :set nonumber #不显示行
+                       git
+
++    mkdir hhh
++    git init
++    ls  # 无
++    ls -a   # . .. .git 
++    touch hello  # hello 在hhh里
++    git add hello
++    git -a -m "first versiom"
++    tig
+
+                       7 20
+1.  git pull  # 刷新
+2.  cd # 要切回上一目录在切到下面所包含目录
+3.  git clone 地址
+4.  file # 查看属性。
+5.  ：q！ # 强行退出
+6.  history # 历史操作
+7.  unzip   # 解压
+
+                   c 语言
+
+
+1.  gcc -Wall **.c  # 严格检查代码     #  Wall中W 是大写！
+2.  echo $?   #  运行之后，用此指令，若为0，正确，main 函数要把返回值返回到系统。
+3.vim  编译    
+(1)	+  gcc a.c  # 以 a.c 为例   
+	+  ls
+	+  ./a.out
+(2)
+	+  在vim里编译
+	+  :w 
+	+  :sh  # vim 命令行里
+	+  cc a.c
+	+  ./a.out
+	+  ctrl D  #  回到vim里，光标位置不变，当代码多时能凸现出优点
+	+  :u  # 回到上一次修改，ctrl D 再往回切
+(3)     +  gcc -S a.c # 以a.c为例，
+        +  ls  # 会出现 a.s
+        +  vim a.s #  是汇编程序 
+(4)     +  vim a.c 
+        +  Ctrl+n   # it is used in INSERT mode
+                      it will search current file add all included files
+(5)     +  vim .vimrc # 对vim的设置
+
+
+                            怎么写笔记
+
+   上攒文件 (在笔记liuyu-note或liuyu-projects下)
+(1)    +  git add a.c
+       +  git commit -a -m " ***** "
+       +  git push(第一次会有所不同)。
+(2)   
+       +  先 vim .gitconfig ,在最后一行写[core]
+                                               editor = vim
+       +  vim a.c (改一下，退出)
+       +  git commit -a   #  可增加注释
+       +  git push
+                             怎么建工程
++    Dashboard
++    New Repository
++    填写第一行就行  Project Name 要与所建的文件名相同
+                            怎么删除工程
++    Dashboard ——>***-Projects——>Admin
+                            怎么删除工程里的文件
++    git rm a.c  ( 不跟踪)
++    git commit -a      （此步骤不能省）
++    git push
+
+
+                          vim
++  /home/akaedu/.vim/snippets
++  vim c.snippets
++  举例         # added for dog
+          snippet dog        记得type Tabe ,否则出现红字。
+                I love dogs
+
+  为了使命令简短(.bashrc)
++   /home/akaedu
++   vim .bashrc
++   举例        在最后一行输入 alias aaa='sudo apt-get install'
++   source .bashrc  #相当于把 .bashrc 里的全运行一遍
+

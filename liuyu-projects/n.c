@@ -4,6 +4,6 @@ int main ()
 {
 
    printf ("挺好玩!\n");
-
+   return 0;
 }
 

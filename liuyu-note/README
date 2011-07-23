@@ -131,7 +131,10 @@ vim
 	set expandtab  ''把 Tab 展开成空格“
 	set tabstop=4   ”让Tab 占4个空格“
 	set shiftwidth=4 “缩进4个空格，不是8个。”
-        set dictionary=/uer/share/dict/words "不起文件"        
+    set dictionary=/uer/share/dict/words "不起文件"        
+    set dictionary=/usr/share/dict/words  "在.c文件里只检查注释"
+
+
 
   在vim 文件里怎么查找
 +   /***

@@ -10,6 +10,6 @@ int main ()
       printf("%d*%d=%-2d",j,i,i*j);
       printf("\n");
     }
-
+     return 0;
 
 }

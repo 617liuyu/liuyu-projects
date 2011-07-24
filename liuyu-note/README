@@ -16,16 +16,16 @@ Ctrl  PgDn /PgUp   换标签
 3.
 
 +## 可视行(visual line)
-
++
 +启动和退出: V ((Esc)shift+v)
              j k 上下选中
              d   剪切
              p(小)   往下粘贴
              P       往上粘贴
-
++
 +整体缩进几行代码： shift+v (可视行模式)
                     shift+v用j 或 k
-
++
 +首先用可视行模式选中这几行,然后 `shift + >`,'shift + <'
  
 
@@ -73,9 +73,7 @@ vim
 	+  ./a.out
 (2)
 	+  在vim里编译
-	+  :w
-    +  :wq
-    +  :wqa
+	+  :w 
 	+  :sh  # vim 命令行里
 	+  cc a.c
 	+  ./a.out
@@ -88,13 +86,7 @@ vim
         +  Ctrl+n   # it is used in INSERT mode
                       it will search current file add all included files
 (5)     +  vim .vimrc # 对vim的设置
-(6)     +  尽量用空格缩进，不用Tab；两者不能混用，如果混用，会造成格式混乱。如果
-           在.vimrc里设置一下，就可以用空格。
-(7)     +  aaa ctags,安装ctags,
-        +  ctags a.c  ,下多一个tags文件，
-        +  ctrl+]从调用地方跳到定义，
-        +  ctrl+t跳回老位置
-        +  ctags *   # *代表当前下的所有文件。
+(6)     +  尽量用空格缩进，不用Tab；两者不能混用，如果混用，会造成格式混乱。
 
                             怎么写笔记
 
@@ -134,11 +126,8 @@ vim
 +   source .bashrc  #相当于把 .bashrc 里的全运行一遍
   vim 配置文件
 +   vim .vimrc
-    map <tab> :bn<cr>
-    map jj <esc> 
-    map ,ss :set spell<cr>
-    set hidden
-    set autoindent
+        set hidden
+	set autoindent  “回车时与上一行对齐”
 	set expandtab  ''把 Tab 展开成空格“
 	set tabstop=4   ”让Tab 占4个空格“
 	set shiftwidth=4 “缩进4个空格，不是8个。”
